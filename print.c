@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%') /*Checks for format specifiers*/
 		{
 			if (format[i + 1] == '%')
-			{	total_len += _putchar(format[i]);
+			{	total_len += _write_char(format[i]);
 				i++;
 			}
 			else if (format[i + 1] != '\0')
