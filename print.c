@@ -9,6 +9,7 @@ int _printf(const char *format, ...)
 	int total_len = 0, i = 0;
 	va_list list;
 	char *buffer, *start;
+	int (*function)(va_list);
 	
 	va_start(list, format), buffer = malloc(sizeof(char) * 1024);;
 	
@@ -17,6 +18,7 @@ int _printf(const char *format, ...)
 	
 	if (!format[i])
 		return (0);
+	
 	
 	
 	
