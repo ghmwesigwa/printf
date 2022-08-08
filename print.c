@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int total_len = 0, i;
+	int total_len = -1, i;
 	va_list list;
 	int (*function)(va_list);
 	
