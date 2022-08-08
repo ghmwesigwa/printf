@@ -1,4 +1,5 @@
 #include "main.h"
+#include "picker.c"
 
 /**
  * _printf - custom printf version
