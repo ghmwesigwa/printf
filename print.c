@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - custom printf version
  * @format: initial string with all identifiers
@@ -6,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int total_len = -1, i;
+	int total_len = 0, i;
 	va_list list;
 	int (*function)(va_list);
 	
