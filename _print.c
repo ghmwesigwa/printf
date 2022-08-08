@@ -1,44 +1,57 @@
 #include "main.h"
-#include "picker.c"
 
 /**
  * _printf - custom printf version
  * @format: initial string with all identifiers
  * Return: number of characters printed
  **/
+
 int _printf(const char *format, ...)
 {
-    int total_len = 0;
-    int i;
-    va_list arg_list;
-    int (*function)(va_list);
+	int i, j = 0, buff_count = 0, prev_buff_count = 0;
+	char buffer[2000];
+	va_list arg;
+	func_id f_list[] = {
+		{'c', print_char},
+		{'s', print_str},
+		{'i', print_int},
+		{'d', print_int},
+		{'%', print_perc},
+		{'b', print_bin},
+		{'o', print_oct},
+		{'x', print_hex},
+		{'X', print_X},
+		{'u', print_uint},
+		{'R', print_R13},
+		{'r', print_rev},
+		{'\0', NULL}};
 
-    va_start(arg_list, format);
-
-    if (format == NULL)
-        return (-1);
-
-    for (i = 0; format[i] != '\0'; i++) /* Iterates through the main string*/
-    {
-        if (format[i] == '%')
-        {
-            if (format[i + 1] == '%')
-            {
-                total_len += _write_char(format[i]);
-                i++;
-            }
-            else if (format[i + 1] != '\0')
-            {
-                function = picker(format[i + 1]);
-                total_len += (function ? function(arg_list) : _write_char(format[i]) + _write_char(format[i + 1]));
-                i++;
-            }
-        }
-        else
-        {
-            total_len += _write_char(format[i]);
-        }
-    }
-    va_end(arg_list);
-    return (total_len);
-}
+	if (!format)
+		return (-1);
+	va_start(arg, format);
+	for (i = 0; format && format[i] != '\0'; i++)
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			prev_buff_count = buff_count;
+			for (j = 0; f_list[j].t != '\0'; j++)
+			{
+				if (format[i] == '\0')
+					break;
+				if (format[i] == f_list[j].t)
+				{
+					buff_count = f_list[j].f(buffer, arg, buff_count);
+					break;
+				}
+			}
+			if (buff_count == prev_buff_count && format[i])
+				i--, buffer[buff_count] = format[i], buff_count++;
+		}
+		else
+			buffer[buff_count] = format[i], buff_count++;
+	}
+	va_end(arg);
+	buffer[buff_count] = '\0';
+	print_buff(buffer, buff_count);
+	return (buff_count);
