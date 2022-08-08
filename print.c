@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] != '\0')
 			{
-				function = pick(format[i + 1]);
+				function = picker(format[i + 1]);
 				total_len += (function ? function(list) : _putchar(format[i]) + _putchar(format[i + 1]));
 				i++;
 				
