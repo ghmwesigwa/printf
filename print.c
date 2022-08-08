@@ -8,7 +8,7 @@ int _printf(const char *format, ...)
 {
 	int total_len = 0, i = 0;
 	va_list list;
-	char *p, *start;
+	char *buffer, *start;
 	
 	va_start(list, format);
 	
@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 	
 	if (!format[i])
 		return (0);
+	
 	
   
   
