@@ -4,17 +4,17 @@
 #include <stdarg.h> /* va_list */
 #include <stddef.h> /* typedef */
 #include <unistd.h> /* write */
-#include <stdio.h>  /* malloc, free */
+#include <stdio.h> /* malloc, free */
 #include <stdlib.h> /* memory allocation, process control, conversions, etc */
 
 /* printf functions */
 int _printf(const char *format, ...);
 
 /**
- *struct func_identifier - struct
- *@c: identifier
- *@f: pointer to function that print according to identifier
- */
+*struct func_identifier - struct
+*@c: identifier
+*@f: pointer to function that print according to identifier
+*/
 typedef struct func_identifier
 {
 	char *c;
