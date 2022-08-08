@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 
 		}
 		else
-			total_len += _putchar(format[i]);
+			total_len += _write_char(format[i]);
 
 	}
 	va_end(list);
