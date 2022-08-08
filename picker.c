@@ -9,7 +9,7 @@ int i;
 
 int (*picker(char s))(va_list)
 {
-	function_identifier operations[] = {
+	func_id operations[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
