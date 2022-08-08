@@ -24,8 +24,8 @@ int (*picker(char s))(va_list)
 		{"X", print_heX},
 		{NULL, NULL}
 	};
-  
-  for (i = 0; operations[i].c != NULL; i++)
+	
+	for (i = 0; operations[i].c != NULL; i++)
 	{
 		if (*operations[i].c == s)
 			return (operations[i].f);
