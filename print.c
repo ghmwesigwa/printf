@@ -16,9 +16,9 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++) /* Iterates through the main str*/
 	{
-		if (format[i] == '%')
+		if (format[i] == '%') /*Checks for format specifiers*/
 		{
 			if (format[i + 1] == '%')
 			{	total_len += _putchar(format[i]);
