@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i] != '\0'; i++) /* Iterates through the main string*/
 	{
-		if (format[i] == '%') /*Checks for format specifiers*/
+		if (format[i] == '%')
 		{
 			if (format[i + 1] == '%')
 			{	total_len += _write_char(format[i]);
