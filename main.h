@@ -19,7 +19,6 @@ typedef struct func_identifier
 {
 	char *c;
 	int (*f)(va_list);
-};
-typedef struct func_identifier func_id;
+} func_id;
 
 #endif
