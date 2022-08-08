@@ -14,7 +14,7 @@ int _printf(const char *format, ...);
 *struct func_identifier - struct
 *@c: identifier
 *@f: pointer to function that print according to identifier
-*/
+**/
 typedef struct func_identifier
 {
 	char *c;
