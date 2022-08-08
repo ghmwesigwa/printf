@@ -41,4 +41,3 @@ int _printf(const char *format, ...)
     va_end(arg_list);
     return (total_len);
 }
-Footer
