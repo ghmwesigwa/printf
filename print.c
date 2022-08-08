@@ -10,13 +10,16 @@ int _printf(const char *format, ...)
 	va_list list;
 	char *buffer, *start;
 	
-	va_start(list, format);
+	va_start(list, format), buffer = malloc(sizeof(char) * 1024);;
 	
 	if (format == NULL)
 		return (-1);
 	
 	if (!format[i])
 		return (0);
+	
+	
+	
 	
 	
   
