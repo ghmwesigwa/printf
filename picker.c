@@ -9,7 +9,7 @@ int i;
 
 int (*picker(char s))(va_list)
 {
-	func_id operations[] = {
+	func_id f_list[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
@@ -25,10 +25,10 @@ int (*picker(char s))(va_list)
 		{NULL, NULL}
 	};
 	
-	for (i = 0; operations[i].c != NULL; i++)
+	for (i = 0; f_list[i].c != NULL; i++)
 	{
-		if (*operations[i].c == s)
-			return (operations[i].f);
+		if (*f_list[i].c == s)
+			return (f_list[i].f);
 	}
 	return (NULL);
 }
