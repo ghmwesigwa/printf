@@ -9,10 +9,10 @@ int _printf(const char *format, ...)
 {
     int total_len = 0;
     int i;
-    va_list list;
+    va_list arg_list;
     int (*function)(va_list);
 
-    va_start(list, format);
+    va_start(arg_list, format);
 
     if (format == NULL)
         return (-1);
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
             else if (format[i + 1] != '\0')
             {
                 function = picker(format[i + 1]);
-                total_len += (function ? function(list) : _write_char(format[i]) + _write_char(format[i + 1]));
+                total_len += (function ? function(arg_list) : _write_char(format[i]) + _write_char(format[i + 1]));
                 i++;
             }
         }
@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
             total_len += _write_char(format[i]);
         }
     }
-    va_end(list);
+    va_end(arg_list);
     return (total_len);
 }
 Footer
