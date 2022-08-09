@@ -1,0 +1,25 @@
+#include "main.h"
+/**
+* picker - search and return the right print_ function
+* @s: array
+* Return: return a function
+**/
+
+int i;
+
+int (*picker(char s))(va_list)
+{
+	func_id f_list[] = {
+		{"c", print_c},
+		{"s", print_s},
+		{"%", print_p}
+
+	};
+	
+	for (i = 0; f_list[i].c != NULL; i++)
+	{
+		if (*f_list[i].c == s)
+			return (f_list[i].f);
+	}
+	return (NULL);
+}
