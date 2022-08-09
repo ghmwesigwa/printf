@@ -26,7 +26,7 @@ int _putchar(char c);
 int _puts(char *str, int ascii);
 int print_c(va_list list);
 int print_s(va_list list);
-int print_int_number(int n);
+int print_i(va_list list);
 int print_p(va_list args __attribute__((unused)));
 int convert_alpha_numeric(int nb, int upper);
 int print_i(va_list list);
