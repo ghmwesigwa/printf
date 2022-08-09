@@ -12,7 +12,7 @@ int (*func_picker(char s))(va_list)
 	func_id f_list[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"%", print_p}
+		{"%", print_p},
 
 	};
 	int i;
