@@ -20,6 +20,7 @@ int print_u(va_list list);
 int print_o(va_list list);
 int print_h_l(va_list list);
 int print_h_u(va_list list);
+int print_s_x(va_list list);
 
 /**
 *struct func_identifier - struct
