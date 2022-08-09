@@ -36,7 +36,6 @@ int _printf(const char *format, ...)
 	int i;
 	va_list arg_list;
 	int (*function)(va_list);
-	
 	va_start(arg_list, format);
 	
 	if (format[0] == '%' && format[1] == '\0')
@@ -54,7 +53,8 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] != '\0')
 			{
 				function = func_picker(format[i + 1]);
-				total_len += (function ? function(arg_list) : _putchar(format[i]) + _putchar(format[i + 1]));
+				total_len += (function ? function(arg_list) :
+					      _putchar(format[i]) + _putchar(format[i + 1]));
 				i++;
 			}
 		}
