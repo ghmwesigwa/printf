@@ -9,6 +9,13 @@
 
 /* printf functions */
 int _printf(const char *format, ...);
+int print_b(va_list ap);
+int print_c(va_list list);
+int print_s(va_list list);
+int print_i(va_list list);
+int print_int_number(int n);
+int print_i(va_list list);
+int print_p(va_list args __attribute__((unused)));
 
 /**
 *struct func_identifier - struct
@@ -24,13 +31,7 @@ typedef struct func_identifier
 /* helper functions */
 int _putchar(char c);
 int _puts(char *str, int ascii);
-int print_c(va_list list);
-int print_s(va_list list);
-int print_i(va_list list);
-int print_p(va_list args __attribute__((unused)));
 int convert_alpha_numeric(int nb, int upper);
-int print_int_number(int n);
-int print_i(va_list list);
 char *convert_base(unsigned long nb, unsigned int base, int upper);
 
 
