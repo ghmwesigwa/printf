@@ -2,7 +2,7 @@
 
 /**
  * print_h_l - print hexa lower
- * @ap: arg list
+ * @list: arg list
  * Return: number of printed char
  */
 
