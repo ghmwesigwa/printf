@@ -14,7 +14,8 @@ int (*func_picker(char s))(va_list)
 		{"s", print_s},
 		{"%", print_p},
 		{"d", print_i},
-		{"i", print_i}
+		{"i", print_i},
+		{"b", print_b}
 
 	};
 	int i;
