@@ -5,7 +5,7 @@
  * Return: percent character
  */
 
-int print_p(va_list args __attribute__((unused))va_list list)
+int print_p(va_list args __attribute__((unused)))
 {
 	return (_putchar('%'));
 }
