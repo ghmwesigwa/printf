@@ -23,6 +23,7 @@ typedef struct func_identifier
 
 /* helper functions */
 int _putchar(char c);
+int _puts(char *str, int ascii);
 int print_c(va_list list);
 int print_s(va_list list);
 int print_p(va_list args __attribute__((unused)));
