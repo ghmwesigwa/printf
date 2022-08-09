@@ -12,6 +12,7 @@ int (*func_picker(char s))(va_list)
 	func_id f_list[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"S", print_s_x},
 		{"%", print_p},
 		{"d", print_i},
 		{"i", print_i},
