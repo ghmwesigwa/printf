@@ -6,7 +6,6 @@
 * Return: return a function
 **/
 
-int i;
 
 int (*func_picker(char s))(va_list)
 {
@@ -16,7 +15,7 @@ int (*func_picker(char s))(va_list)
 		{"%", print_p}
 
 	};
-	
+	int i;
 	for (i = 0; f_list[i].c != NULL; i++)
 	{
 		if (*f_list[i].c == s)
