@@ -61,7 +61,7 @@ int _printf(const char *format, ...)
 		{
 			total_len += _putchar(format[i]);
 		}
+		va_end(arg_list);
 	}
-	va_end(arg_list);
 	return (total_len);
 }
