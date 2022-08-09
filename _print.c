@@ -38,34 +38,32 @@ int _printf(const char *format, ...)
 
 	if (format != NULL)
 	{
-		
-	va_start(arg_list, format);
-	if (format[0] == '%' && format[1] == '\0')
-		return (-1);
-
-	for (i = 0; format[i] != '\0'; i++) /* Iterates through the main string*/
-	{
-		if (format[i] == '%')
+		va_start(arg_list, format);
+		if (format[0] == '%' && format[1] == '\0')
+			return (-1);
+		for (i = 0; format[i] != '\0'; i++) /* Iterates through the main string*/
 		{
-			if (format[i + 1] == '%')
+			if (format[i] == '%')
+			{
+				if (format[i + 1] == '%')
+				{
+					total_len += _putchar(format[i]);
+					i++;
+				}
+				else if (format[i + 1] != '\0')
+				{
+					function = func_picker(format[i + 1]);
+					total_len += (function ? function(arg_list) :
+						      _putchar(format[i]) + _putchar(format[i + 1]));
+					i++;
+				}
+			}
+			else
 			{
 				total_len += _putchar(format[i]);
-				i++;
-			}
-			else if (format[i + 1] != '\0')
-			{
-				function = func_picker(format[i + 1]);
-				total_len += (function ? function(arg_list) :
-					      _putchar(format[i]) + _putchar(format[i + 1]));
-				i++;
 			}
 		}
-		else
-		{
-			total_len += _putchar(format[i]);
-		}
-	}
-	va_end(arg_list);
+		va_end(arg_list);
 	}
 	return (total_len);
 }
