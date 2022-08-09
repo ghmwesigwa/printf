@@ -32,7 +32,7 @@ int (*func_picker(char s))(va_list)
  **/
 int _printf(const char *format, ...)
 {
-	int i;
+	int i, total_len = 0;
 
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
