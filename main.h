@@ -19,7 +19,12 @@ typedef struct func_identifier
 {
 	char *c;
 	int (*f)(va_list);
-};
-typedef struct func_identifier func_id;
+} func_id;
+
+/* helper functions */
+int print_c(va_list list);
+int print_s(va_list list);
+int print_percent(va_list args __attribute__((unused)));
+
 
 #endif
