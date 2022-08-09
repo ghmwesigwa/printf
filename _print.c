@@ -1,3 +1,4 @@
+
 #include "main.h"
 
 /**
@@ -35,7 +36,7 @@ int _printf(const char *format, ...)
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
 	int i;
-	
+
 	for (i = 0; format[i] != '\0'; i++) /* Iterates through the main string*/
 	{
 		if (format[i] == '%')
@@ -60,4 +61,15 @@ int _printf(const char *format, ...)
 	}
 	va_end(arg_list);
 	return (total_len);
+}
+include "main.h"
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: the character to print
+ * Return: number of printed char
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
