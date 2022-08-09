@@ -12,10 +12,9 @@ int (*func_picker(char s))(va_list)
         {"c", print_c},
         {"s", print_s},
         {"%", print_p}
-
     };
     int i;
-
+    
     for (i = 0; f_list[i].c != NULL; i++)
     {
         if (*f_list[i].c == s)
