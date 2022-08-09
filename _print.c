@@ -64,7 +64,6 @@ int _printf(const char *format, ...)
 	va_end(arg_list);
 	return (total_len);
 }
-include "main.h"
 
 /**
  * _putchar - writes the character c to stdout
