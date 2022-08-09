@@ -23,6 +23,7 @@ int print_h_u(va_list list);
 int print_s_x(va_list list);
 int print_ptr(va_list list);
 int print_s_r(va_list list);
+int print_rot13(va_list ap);
 
 /**
 *struct func_identifier - struct
