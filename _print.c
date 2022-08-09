@@ -21,7 +21,8 @@ int (*func_picker(char s))(va_list)
 		{"o", print_o},
 		{"x", print_h_l},
 		{"X", print_h_u},
-		{"p", print_ptr}
+		{"p", print_ptr},
+		{"r", print_s_r},
 
 	};
 	int i;
