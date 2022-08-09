@@ -23,6 +23,7 @@ int (*func_picker(char s))(va_list)
 		{"X", print_h_u},
 		{"p", print_ptr},
 		{"r", print_s_r},
+		{"R", print_rot13}
 
 	};
 	int i;
