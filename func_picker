@@ -10,7 +10,7 @@ int i;
 int (*picker(char s))(va_list)
 {
 	func_id f_list[] = {
-		{"c", print_char},
+		{"c", print_c},
 		{"s", print_string},
 		{"%", print_percent},
 		{"d", print_integer},
