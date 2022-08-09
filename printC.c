@@ -2,7 +2,7 @@
 
 /**
  * print_c - print single character
- * @ap: arg list
+ * @list: arg list
  * Return: number of printed char
  */
 int print_c(va_list list)
