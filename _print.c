@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 	va_list arg_list;
 	int (*function)(va_list);
 
+	va_start(arg_list, format);
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
 
