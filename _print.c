@@ -36,6 +36,9 @@ int _printf(const char *format, ...)
 	va_list arg_list;
 	int (*function)(va_list);
 
+	if (format != NULL)
+	{
+		
 	va_start(arg_list, format);
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
@@ -63,5 +66,6 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(arg_list);
+	}
 	return (total_len);
 }
