@@ -27,7 +27,7 @@ int _puts(char *str, int ascii);
 int print_c(va_list list);
 int print_s(va_list list);
 int print_p(va_list args __attribute__((unused)));
-int convert_alpha_numeric(int nb, int upper)
+int convert_alpha_numeric(int nb, int upper);
 char *convert_base(unsigned long nb, unsigned int base, int upper);
 
 
