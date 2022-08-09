@@ -48,19 +48,19 @@ int _printf(const char *format, ...)
         {
             if (format[i + 1] == '%')
             {
-                total_len += _write_char(format[i]);
+                total_len += _putchar(format[i]);
                 i++;
             }
             else if (format[i + 1] != '\0')
             {
                 function = func_picker(format[i + 1]);
-                total_len += (function ? function(arg_list) : _write_char(format[i]) + _write_char(format[i + 1]));
+                total_len += (function ? function(arg_list) : _putchar(format[i]) + _putchar(format[i + 1]));
                 i++;
             }
         }
         else
         {
-            total_len += _write_char(format[i]);
+            total_len += _putchar(format[i]);
         }
     }
     va_end(arg_list);
