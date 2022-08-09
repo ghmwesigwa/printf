@@ -33,10 +33,10 @@ int (*func_picker(char s))(va_list)
  **/
 int _printf(const char *format, ...)
 {
+	int i;
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
-	int i;
-
+	
 	for (i = 0; format[i] != '\0'; i++) /* Iterates through the main string*/
 	{
 		if (format[i] == '%')
