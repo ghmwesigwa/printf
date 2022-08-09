@@ -29,6 +29,7 @@ int print_s(va_list list);
 int print_i(va_list list);
 int print_p(va_list args __attribute__((unused)));
 int convert_alpha_numeric(int nb, int upper);
+int print_int_number(va_arg(list, int));
 int print_i(va_list list);
 char *convert_base(unsigned long nb, unsigned int base, int upper);
 
