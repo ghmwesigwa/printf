@@ -44,6 +44,7 @@ char *convert_base(unsigned long nb, unsigned int base, int upper);
 int print_unsigned_number(unsigned int n);
 char *convert_base_pointer(unsigned long p);
 int _strlen_recursion(char *s);
+char *convert_rot13(char *str);
 
 
 #endif
