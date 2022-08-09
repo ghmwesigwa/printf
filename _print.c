@@ -34,7 +34,8 @@ int _printf(const char *format, ...)
 {
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
-
+	int i;
+	
 	for (i = 0; format[i] != '\0'; i++) /* Iterates through the main string*/
 	{
 		if (format[i] == '%')
