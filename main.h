@@ -22,6 +22,7 @@ typedef struct func_identifier
 } func_id;
 
 /* helper functions */
+int _putchar(char c);
 int print_c(va_list list);
 int print_s(va_list list);
 int print_p(va_list args __attribute__((unused)));
