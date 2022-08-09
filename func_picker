@@ -22,7 +22,8 @@ int (*picker(char s))(va_list)
 		* {"o", print_octal},
 		* {"x", print_hex},
 		* {"X", print_heX},
-		* {'\0', NULL} **/
+		* {'\0', NULL}
+		**/
 	};
 	
 	for (i = 0; f_list[i].c != NULL; i++)
