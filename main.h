@@ -16,6 +16,10 @@ int print_i(va_list list);
 int print_int_number(int n);
 int print_i(va_list list);
 int print_p(va_list args __attribute__((unused)));
+int print_u(va_list list);
+int print_o(va_list list);
+int print_h_l(va_list list);
+int print_h_u(va_list list);
 
 /**
 *struct func_identifier - struct
