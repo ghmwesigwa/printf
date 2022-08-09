@@ -33,7 +33,7 @@ int (*func_picker(char s))(va_list)
 int _printf(const char *format, ...)
 {
 	int i, total_len = 0;
-	va_list ar_list;
+	va_list arg_list;
 	int (*function)(va_list);
 
 	if (format[0] == '%' && format[1] == '\0')
