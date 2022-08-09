@@ -32,7 +32,7 @@ int (*func_picker(char s))(va_list)
  **/
 int _printf(const char *format, ...)
 {
-    int total_len = 0;
+	int total_len = 0;
     int i;
     va_list arg_list;
     int (*function)(va_list);
