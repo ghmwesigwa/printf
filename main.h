@@ -24,7 +24,7 @@ typedef struct func_identifier
 /* helper functions */
 int print_c(va_list list);
 int print_s(va_list list);
-int print_percent(va_list args __attribute__((unused)));
+int print_p(va_list args __attribute__((unused)));
 
 
 #endif
