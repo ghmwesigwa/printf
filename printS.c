@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * print_s - print a string
- * @ap: arg list
+ * @list: arg list
  * Return: number of printed char
  */
 int print_s(va_list list)
