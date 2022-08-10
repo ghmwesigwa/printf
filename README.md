@@ -7,6 +7,7 @@ _printf() > In this project, we recreated a mini-verison of the ```printf``` fun
   ├── printC.c ------------------------------- handles %c to print a single character
   ├── printS.c ------------------------------- handles %s to print a string of characters
   ├── printP.c ------------------------------- handles %
+  ├── shall more shortly
   ```
 
                                                                                                   
